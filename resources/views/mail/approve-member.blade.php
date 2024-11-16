@@ -9,5 +9,6 @@
 <body>
 <h1>{{ $data['title'] }}</h1>
 <h1>{{ $data['body'] }}</h1>
+<a href="{{ route('dashboard.user') }}" class="btn btn-success">Go</a>
 </body>
 </html>
