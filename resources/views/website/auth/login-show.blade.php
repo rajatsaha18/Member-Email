@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <h1>Login Form</h1>
     <section class="py-5">
         <div class="container">
             <a href="{{ route('dashboard') }}" class="btn btn-success">Dashboard</a>
@@ -16,12 +16,8 @@
 
                 <div class="col-md-6">
                     <div class="card card-body">
-                        <form action="{{ route('submit') }}" method="POST">
+                        <form action="{{ route('login.user') }}" method="POST">
                             @csrf
-                            <div class="from-group">
-                                <label for="">Name</label>
-                                <input type="text" name="name" class="form-control">
-                            </div>
                             <div class="from-group">
                                 <label for="">email</label>
                                 <input type="email" name="email" class="form-control">
@@ -32,7 +28,7 @@
                             </div>
                             <div class="from-group">
                                 <label for=""></label>
-                                <input type="submit" class="btn btn-success" value="submit">
+                                <input type="submit" class="btn btn-success" value="Login">
                             </div>
                         </form>
                     </div>
